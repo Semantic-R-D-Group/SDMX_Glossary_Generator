@@ -1,0 +1,1068 @@
+
+# 1. ACCURACY_OVERALL  skos:broader - 1
+sip-concept:ACCURACY_OVERALL a skos:Concept ;
+    rdfs:label "Accuracy - overall"@en ;
+    skos:definition "Assessment of accuracy, linked to a certain data set or domain, which is summarising the various components into one single measure."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ACCURACY_OVERALL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the main sources of random and systematic error in the statistical outputs and provide a summary assessment of all errors with special focus on the impact on key estimates. The bias assessment can be in quantitative or qualitative terms, or both. It should reflect the producer's best current understanding (sign and order of magnitude) including actions taken to reduce bias. Revision aspects should also be included here if considered relevant."@en ;
+    skos:broader sip-concept:ACCURACY ;
+    skos:related sip-concept:NONSAMPLING_ERR ;
+    skos:related sip-concept:SAMPLING_ERR ;
+    skos:exactMatch sdmx-concept:accuracyOverall .
+
+# 2. ANNOTABLE_ART  skos:broader - 1
+sip-concept:ANNOTABLE_ART a skos:Concept ;
+    rdfs:label "Annotable artefact"@en ;
+    skos:definition "Construct capable of defining annotations"@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ANNOTABLE_ART" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "The annotation in SDMX is way of extending the functionality of SDMX structural metadata."@en ;
+    skos:broader sip-concept:ANNOTATION ;
+    skos:related sip-concept:ARTEFACT ;
+    skos:related sip-concept:IDENTIFIABLE_ART ;
+    skos:related sip-concept:MAINTAINABLE_ART ;
+    skos:related sip-concept:NAMEABLE_ART ;
+    skos:related sip-concept:VERSIONABLE_ART .
+
+# 3. ATTACHMENT_LEV  skos:broader - 1
+sip-concept:ATTACHMENT_LEV a skos:Concept ;
+    rdfs:label "Attachment level"@en ;
+    skos:definition "Property of an attribute defining the object to which data or metadata are linked."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ATTACHMENT_LEV" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """For each attribute specified in a data structure, there is a definition of whether this attribute takes: a value for each observation in the data set, or; a value for each time series in the data set, or; a value for each group in the data set, or; a single value for the entire data set. Some metadata concepts (e.g. frequency) may not be meaningful at the observation level, but only when applied to a higher level (e.g. to a time series of observations). Time, on the other hand, is meaningful at observation level, because every observation is associated with a specific point or period in time. Data Structure Definitions and Metadata Structure Definitions provide information about the level at which a particular concept descriptor is relevant: at observation level, time series level, group level, dataset level or even agency level. This is known as the "attachment level" of the concept."""@en ;
+    skos:broader sip-concept:ATTRIBUTE ;
+    skos:related sip-concept:ATTRIBUTE_REL .
+
+# 4. ATTRIBUTE  skos:broader - 1
+sip-concept:ATTRIBUTE a skos:Concept ;
+    rdfs:label "Attribute"@en ;
+    skos:definition "Statistical concept providing qualitative information about a specific statistical object."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ATTRIBUTE" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "The specific statistical object in a data set can be a data set, observation, series key or partial key, and in a metadata set can be any object in the SDMX Information Model. Concepts such as units, magnitude, currency of denomination, titles (these are all commonly specified as attributes in a data structure) and methodological comments, quality statements (commonly specified as attributes in a metadata structure ) can be used as attributes in the context of an agreed data exchange. The Attribute Value is the reported value in a data set or a metadata set such as a specific currency or a specific dissemination policy applicable to the object to which the attribute value is attached."@en ;
+    skos:related sip-concept:ATTACHMENT_LEV ;
+    skos:related sip-concept:CONSTRAINT ;
+    skos:related sip-concept:DATAFLOW ;
+    skos:broader sip-concept:DSD ;
+    skos:related sip-concept:MSD .
+
+# 5. BASE_WEIGHT  skos:broader - 1
+sip-concept:BASE_WEIGHT a skos:Concept ;
+    rdfs:label "Base weight"@en ;
+    skos:definition "Weights of a weighting system for an index number computed according to the information relating to the base period instead, for example, of the current period."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).BASE_WEIGHT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: Code list; String"@en ;
+    skos:note "Codelist ID: CL_BASE_WEIGHT"@en ;
+    skos:broader sip-concept:BASE_PER .
+
+# 6. CODING_FORMAT  skos:broader - 1
+sip-concept:CODING_FORMAT a skos:Concept ;
+    rdfs:label "Coding format"@en ;
+    skos:definition "Specification of the representation for the codes in a code list."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CODING_FORMAT" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "The specification of the format information for the codes, such as whether the codes are alphabetic, numeric or alphanumeric, and the code length."@en ;
+    skos:broader sip-concept:CODE ;
+    skos:related sip-concept:CODELIST ;
+    skos:related sip-concept:LEVEL .
+
+# 7. COHER_X_DOM  skos:broader - 1
+sip-concept:COHER_X_DOM a skos:Concept ;
+    rdfs:label "Coherence - cross domain"@en ;
+    skos:definition "Extent to which statistics are reconcilable with those obtained through other data sources or statistical domains."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COHER_X_DOM" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the differences in the statistical results calculated on the basis of different statistical domains, or surveys based on different methodologies (e.g. between annual and short-term statistics or between social statistics and national accounts)."@en ;
+    skos:broader sip-concept:COHERENCE ;
+    skos:related sip-concept:COHER_INTERNAL ;
+    skos:related sip-concept:COHER_NATACCOUNTS ;
+    skos:related sip-concept:COHER_FREQSTAT ;
+    skos:exactMatch sdmx-concept:coherXDom .
+
+# 8. COHER_INTERNAL  skos:broader - 1
+sip-concept:COHER_INTERNAL a skos:Concept ;
+    rdfs:label "Coherence - internal"@en ;
+    skos:definition "Extent to which statistics are consistent within a given data set."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COHER_INTERNAL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the differences in the statistical results calculated for the same statistical domain, based on stable or changing methodology (e.g. between provisional and final statistics or between different reference years showing break in series). Frequently, a group of statistics of a different type (in monetary value, in volume or constant price, price indicators, etc.) measure the same phenomenon using different methodologies. For instance, statistics on employment, depending on whether they result from employers' declarations or household surveys do not lead exactly to the same results. However, there are often differences in the concepts used (de-jure or de-facto population, for instance), in the registration date, in the cif/fob registration for external trade, etc. It is very important to check that these representations do not diverge too much in order to anticipate users' questions and for preparing corrective actions."@en ;
+    skos:broader sip-concept:COHERENCE ;
+    skos:related sip-concept:COHER_X_DOM ;
+    skos:related sip-concept:COHER_NATACCOUNTS ;
+    skos:related sip-concept:COHER_FREQSTAT ;
+    skos:exactMatch sdmx-concept:coherInternal .
+
+# 9. COHER_NATACCOUNTS  skos:broader - 1
+sip-concept:COHER_NATACCOUNTS a skos:Concept ;
+    rdfs:label "Coherence - National Accounts"@en ;
+    skos:definition "Extent to which statistics are reconcilable with National Accounts."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COHER_NATACCOUNTS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to report, where relevant, the results of comparisons with the National Account framework and feedback from National Accounts with respect to coherence and accuracy problems and should be a trigger for further investigation."@en ;
+    skos:broader sip-concept:COHERENCE ;
+    skos:related sip-concept:COHER_X_DOM ;
+    skos:related sip-concept:COHER_INTERNAL ;
+    skos:related sip-concept:COHER_FREQSTAT .
+
+# 10. COHER_FREQSTAT  skos:broader - 1
+sip-concept:COHER_FREQSTAT a skos:Concept ;
+    rdfs:label "Coherence - sub-annual and annual statistics"@en ;
+    skos:definition "Extent to which statistics of different frequencies are reconcilable."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COHER_FREQSTAT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Coherence between sub-annual and annual statistical outputs is a natural expectation but the statistical processes producing them are often quite different. This metadata element is used to compare sub-annual and annual estimates and, eventually, describe reasons for lack of coherence between sub-annual and annual outputs."@en ;
+    skos:broader sip-concept:COHERENCE ;
+    skos:related sip-concept:COHER_X_DOM ;
+    skos:related sip-concept:COHER_INTERNAL ;
+    skos:related sip-concept:COHER_NATACCOUNTS .
+
+# 11. COMPAR_GEO  skos:broader - 1
+sip-concept:COMPAR_GEO a skos:Concept ;
+    rdfs:label "Comparability - geographical"@en ;
+    skos:definition "Extent to which statistics are comparable between geographical areas."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPAR_GEO" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Geographical comparability refers to the degree of comparability between similar survey results measuring the same phenomenon across geographical areas or regions. The surveys are in general conducted by different statistical agencies, referring to populations in different geographical areas, sometimes based on a harmonised methodology."@en ;
+    skos:related sip-concept:ASYMMETRY_COEFF ;
+    skos:broader sip-concept:COMPARABILITY ;
+    skos:related sip-concept:COMPAR_TIME ;
+    skos:exactMatch sdmx-concept:comparGeo .
+
+# 12. COMPAR_TIME  skos:broader - 1
+sip-concept:COMPAR_TIME a skos:Concept ;
+    rdfs:label "Comparability - over time"@en ;
+    skos:definition "Extent to which statistics are comparable or reconcilable over time."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPAR_TIME" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Comparability over time refers to the degree of comparability between the results of two or several surveys related to the same domain, carried out by the same statistical agency."@en ;
+    skos:related sip-concept:ASYMMETRY_COEFF ;
+    skos:broader sip-concept:COMPARABILITY ;
+    skos:related sip-concept:COMPAR_GEO ;
+    skos:exactMatch sdmx-concept:comparTime .
+
+# 13. CONCEPT_SCH  skos:broader - 1
+sip-concept:CONCEPT_SCH a skos:Concept ;
+    rdfs:label "Concept scheme"@en ;
+    skos:definition "Set of concepts that are used in a data structure definition or metadata structure definition."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONCEPT_SCH" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """Structural definitions of both data and reference metadata associate specific statistical concepts with their representations, whether textual, coded, etc. In SDMX these concepts are taken from a "concept scheme" which is maintained by a specific agency. Concept schemes group a set of concepts, provide their definitions and names. It is possible for a single concept scheme to be used both for data structures and metadata structures. A core representation of each concept can be specified (e.g. a code list, or other representations such as "date")."""@en ;
+    skos:broader sip-concept:CONCEPT ;
+    skos:related sip-concept:ITEM_SCH ;
+    skos:related sip-concept:REF_METADATA .
+
+# 14. CONF_DATA_TR  skos:broader - 1
+sip-concept:CONF_DATA_TR a skos:Concept ;
+    rdfs:label "Confidentiality - data treatment"@en ;
+    skos:definition "Rules applied for treating the data set to ensure that private information from individual units cannot be accessed and to prevent unauthorised disclosure."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONF_DATA_TR" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the rules applied when treating the data with regard to statistical confidentiality (e.g. aggregation rules when disseminating data, provision of unit records, etc.)."@en ;
+    skos:broader sip-concept:CONF ;
+    skos:related sip-concept:CONF_POLICY ;
+    skos:related sip-concept:CONF_REDIST ;
+    skos:related sip-concept:CONF_STATUS ;
+    skos:exactMatch sdmx-concept:confDataTr .
+
+# 15. CONF_POLICY  skos:broader - 1
+sip-concept:CONF_POLICY a skos:Concept ;
+    rdfs:label "Confidentiality - policy"@en ;
+    skos:definition "Legislative measures or other formal procedures which prevent unauthorised disclosure of data that identify a person or economic entity either directly or indirectly."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONF_POLICY" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to provide textual descriptions and references to legislation or other rules related to statistical confidentiality."@en ;
+    skos:broader sip-concept:CONF ;
+    skos:related sip-concept:CONF_DATA_TR ;
+    skos:related sip-concept:CONF_REDIST ;
+    skos:related sip-concept:CONF_STATUS ;
+    skos:exactMatch sdmx-concept:confPolicy .
+
+# 16. CONF_REDIST  skos:broader - 1
+sip-concept:CONF_REDIST a skos:Concept ;
+    rdfs:label "Confidentiality - redistribution authorisation policy"@en ;
+    skos:definition "Secondary recipient(s) to whom the sender allows the primary recipient to forward restricted data."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONF_REDIST" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This concept is used in the exchange of restricted data in cases where the sender explicitly allows subsequent forwarding of these data to other organisations."@en ;
+    skos:broader sip-concept:CONF ;
+    skos:related sip-concept:CONF_DATA_TR ;
+    skos:related sip-concept:CONF_POLICY ;
+    skos:related sip-concept:CONF_STATUS .
+
+# 17. CONF_STATUS  skos:broader - 1
+sip-concept:CONF_STATUS a skos:Concept ;
+    rdfs:label "Confidentiality - status"@en ;
+    skos:definition "Information about the confidentiality status of the object to which this attribute is attached."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONF_STATUS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: Code list"@en ;
+    skos:note "Codelist ID: CL_CONF_STATUS"@en ;
+    rdfs:comment "This concept is related to data and determines the exact status of the value. i.e. if a specific value is confidential or not. This concept is always coded, i.e. it takes its value from the respective code list."@en ;
+    skos:broader sip-concept:CONF ;
+    skos:related sip-concept:CONF_DATA_TR ;
+    skos:related sip-concept:CONF_POLICY ;
+    skos:related sip-concept:CONF_REDIST ;
+    skos:exactMatch sdmx-concept:confStatus .
+
+# 18. CONSTRAINT  skos:broader - 1
+sip-concept:CONSTRAINT a skos:Concept ;
+    rdfs:label "Constraint"@en ;
+    skos:definition "Specification of a subset of the possible content of data or metadata that can be derived from the code lists used in a data or metadata structure."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONSTRAINT" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """A constraint can be of a variety of types. For example, a Content Constraint specifies either the "allowable content" (used to restrict the values allowed when data or metadata are reported or exchanged), or the "actual" content (series keys and/or dimension and attribute values present in a data source). In each of these cases the constraint specifies a sub set of the full cube of data that could theoretically be present according to the specification of the Data Structure Definition or Metadata Structure Definition."""@en ;
+    skos:related sip-concept:ATTRIBUTE ;
+    skos:related sip-concept:CODE ;
+    skos:broader sip-concept:CODELIST ;
+    skos:related sip-concept:MEMBER_SEL ;
+    skos:related sip-concept:MEMBER_VAL ;
+    skos:related sip-concept:META_KEY_SET ;
+    skos:related sip-concept:META_KEY_VAL .
+
+# 19. CONTACT_EMAIL  skos:broader - 1
+sip-concept:CONTACT_EMAIL a skos:Concept ;
+    rdfs:label "Contact email address"@en ;
+    skos:definition "E-mail address of the contact points for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_EMAIL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactEmail .
+
+# 20. CONTACT_FAX  skos:broader - 1
+sip-concept:CONTACT_FAX a skos:Concept ;
+    rdfs:label "Contact fax number"@en ;
+    skos:definition "Fax number of the contact points for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_FAX" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactFax .
+
+# 21. CONTACT_MAIL  skos:broader - 1
+sip-concept:CONTACT_MAIL a skos:Concept ;
+    rdfs:label "Contact mail address"@en ;
+    skos:definition "Postal address of the contact points for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_MAIL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactMail .
+
+# 22. CONTACT_NAME  skos:broader - 1
+sip-concept:CONTACT_NAME a skos:Concept ;
+    rdfs:label "Contact name"@en ;
+    skos:definition "Name of the contact points for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_NAME" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactName .
+
+# 23. CONTACT_ORGANISATION  skos:broader - 1
+sip-concept:CONTACT_ORGANISATION a skos:Concept ;
+    rdfs:label "Contact organisation"@en ;
+    skos:definition "Organisation of the contact point(s) for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_ORGANISATION" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String; Code list"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactOrganisation .
+
+# 24. ORGANISATION_UNIT  skos:broader - 1
+sip-concept:ORGANISATION_UNIT a skos:Concept ;
+    rdfs:label "Contact organisation unit"@en ;
+    skos:definition "Addressable subdivision of an organisation."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ORGANISATION_UNIT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This contact refers to the contact point for data and metadata."@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:organisationUnit .
+
+# 25. CONTACT_FUNCT  skos:broader - 1
+sip-concept:CONTACT_FUNCT a skos:Concept ;
+    rdfs:label "Contact person function"@en ;
+    skos:definition """Area of technical responsibility of the contact, such as "methodology", "database management" or "dissemination"."""@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_FUNCT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_PHONE ;
+    skos:exactMatch sdmx-concept:contactFunct .
+
+# 26. CONTACT_PHONE  skos:broader - 1
+sip-concept:CONTACT_PHONE a skos:Concept ;
+    rdfs:label "Contact phone number"@en ;
+    skos:definition "Telephone number of the contact points for the data or metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CONTACT_PHONE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:CONTACT ;
+    skos:related sip-concept:CONTACT_EMAIL ;
+    skos:related sip-concept:CONTACT_FAX ;
+    skos:related sip-concept:CONTACT_MAIL ;
+    skos:related sip-concept:CONTACT_NAME ;
+    skos:related sip-concept:CONTACT_ORGANISATION ;
+    skos:related sip-concept:ORGANISATION_UNIT ;
+    skos:related sip-concept:CONTACT_FUNCT ;
+    skos:exactMatch sdmx-concept:contactPhone .
+
+# 27. COST_BURDEN_EFF  skos:broader - 1
+sip-concept:COST_BURDEN_EFF a skos:Concept ;
+    rdfs:label "Cost and burden - efficiency management"@en ;
+    skos:definition "Cost-benefit analysis, effectiveness of execution of medium term statistical programmes, and ensuring efficient use of resources."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COST_BURDEN_EFF" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:COST_BURDEN ;
+    skos:related sip-concept:COST_BURDEN_RES ;
+    skos:exactMatch sdmx-concept:costBurdenEff .
+
+# 28. COST_BURDEN_RES  skos:broader - 1
+sip-concept:COST_BURDEN_RES a skos:Concept ;
+    rdfs:label "Cost and burden - resources"@en ;
+    skos:definition "Staff, facilities, computing resources, and financing to undertake statistical production."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COST_BURDEN_RES" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "It may include the contribution of respondent time in supplying information (burden) as a distinct subject under this heading."@en ;
+    skos:broader sip-concept:COST_BURDEN ;
+    skos:related sip-concept:COST_BURDEN_EFF ;
+    skos:exactMatch sdmx-concept:costBurdenRes .
+
+# 29. COUNTERPART_AREA  skos:broader - 1
+sip-concept:COUNTERPART_AREA a skos:Concept ;
+    rdfs:label "Counterpart reference area"@en ;
+    skos:definition "Secondary area, as opposed to reference area, to which the measured data are in relation."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COUNTERPART_AREA" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: Code list"@en ;
+    skos:note "Codelist ID: CL_AREA"@en ;
+    rdfs:comment """The "counterpart area" (also known as "vis-a-vis area") is related to statistics on foreign trade, migration or other domains. It determines, from the point of view of the reporting country, the corresponding area to which the economic or other flows are related to (for instance, in statistics on imports, the counterpart reference area is the area of origin of the goods). A categorisation of IDs per attachment level (COUNTERPART_AREA_DSET for dataset, COUNTERPART_AREA_GRP for group) is recommended."""@en ;
+    skos:broader sip-concept:REF_AREA ;
+    skos:closeMatch sdmx-concept:visArea .
+
+# 30. CDCL  skos:broader - 1
+sip-concept:CDCL a skos:Concept ;
+    rdfs:label "Cross-domain code list, CDCL"@en ;
+    skos:definition "SDMX code list meeting at least one of the criteria below:1) Potential application across all statistical domains; 2) Code list maintained by the SDMX Statistical Working Group (SWG) on its initiative; 3) Code list recommended as CDCL by the SDMX SWG although they are in principle maintained by third organisations."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CDCL" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """1) Potential application across all statistical domains. Examples: CL_OBS_STATUS, CL_CONF_STATUS, CL_DECIMALS, CL_UNIT_MULT, CL_AREA. Explanatory note: Key term for this criterion is "potential". These code lists must not necessarily be implemented in all Data Structure Definitions (DSDs) but they potentially could. For example, code list "Unit multiplier" could possibly be used in all implementations dealing with statistical figures but some implementations might not see the need for such a dimension because the statistical values do not require it, e.g. average number of children per household. Inversely, in this example a code list for decimals will be absolutely necessary. 2) Code lists maintained by the SWG on its initiative because 1) they are intended for broad use within the SDMX community and 2) there is a strong need for harmonisation across domains which are not necessarily closely connected with each other. Examples for case 1: CL_AGE, CL_CIVIL_STATUS, CL_FREQ, CL_TIME_FORMAT, CL_SEX, CL_ADJUSTMENT. Explanatory note: By proposing such code lists it is hoped to promote harmonisation across domains and provide ready-to-use artefacts to implementers. Example for case 2: CL_ACTIVITY. Explanatory note: International activity classifications are typically used in different statistical domains (e.g. economic versus social statistics). Without an established CDCL made available in centralised registries, the risk is that one domain develops a code list without taking into account the fact that other domains might use the same classification system. 3) Code lists recommended as CDCL by the SDMX Statistical Working Group (SWG) although they are in principle maintained by third organisations. Examples: CL_AREA (based on the ISO 3166 alpha-2 codes for countries); CL_CURRENCY (based on the ISO 4217 3-character codes for currencies). Explanatory note: In these cases, the value added by the SWG is to propose guidelines on specific methodological issues, e.g. how to code a country that has been split into several new entities."""@en ;
+    skos:broader sip-concept:COG .
+
+# 31. CDC  skos:broader - 1
+sip-concept:CDC a skos:Concept ;
+    rdfs:label "Cross-domain concept, CDC"@en ;
+    skos:definition "Standard concept, covering structural and reference metadata, which should be used in several statistical domains wherever possible to enhance possibilities of the exchange of data and metadata between organisations."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).CDC" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "Within SDMX, cross-domain concepts are envisaged to cover various elements describing statistical data and their quality. When exchanging statistics, institutions can select from a standard set of content-oriented concepts. The list of concepts and their definitions reflects recommended practices and can be the basis for mapping between internal systems when data and metadata are exchanged or shared between and among institutions."@en ;
+    skos:broader sip-concept:COG ;
+    skos:related sip-concept:REF_METADATA ;
+    skos:related sip-concept:STRUCT_META .
+
+# 32. DATA_PROV_SCH  skos:broader - 1
+sip-concept:DATA_PROV_SCH a skos:Concept ;
+    rdfs:label "Data provider scheme"@en ;
+    skos:definition "Maintained collection of data providers."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).DATA_PROV_SCH" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "In SDMX a Data Provider Scheme contains a non-hierarchic list of data providers. Each maintenance agency can have a single data provider scheme, and may have none. The identity of the data provider is a combination of the identity of the data provider scheme (which includes the maintenance agency) in which it resides and the identity of the data provider in that scheme. The Data Provider is the owning organisation of data and reference metadata. These data and reference metadata are reported, exchanged, or disseminated as SDMX data sets and SDMX metadata sets. The type of data and metadata that are available are specified in a Dataflow and Metadataflow. The union of one data provider and one Dataflow or Metadataflow is known as a Provision Agreement. In a data collection scenario the data provider is the organisation reporting the data or reference metadata and information can be linked with the provision agreement. Information linked to the provision agreement can specify where the data or reference metadata are located (data registration) and the data collector (as the Agency of the provision agreement) can specify validation Constraints such as allowable dimension values or series keys for which data can be reported. In a data dissemination scenario information linked to the provision agreement can specify the location of the data source and the content of the data source in terms of series keys available (Constraint)."@en ;
+    skos:related sip-concept:AGENCY_SCH ;
+    skos:related sip-concept:DATA_CONSUM_SCH ;
+    skos:broader sip-concept:DATA_PROVIDER .
+
+# 33. REV_POLICY  skos:broader - 1
+sip-concept:REV_POLICY a skos:Concept ;
+    rdfs:label "Data revision - policy"@en ;
+    skos:definition "Policy aimed at ensuring the transparency of disseminated data, whereby preliminary data are compiled that are later revised."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REV_POLICY" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the general guidelines for handling data revisions applied by a data providing agency."@en ;
+    skos:broader sip-concept:DATA_REV ;
+    skos:related sip-concept:REV_PRACTICE ;
+    skos:related sip-concept:REV_STUDY ;
+    skos:exactMatch sdmx-concept:revPolicy .
+
+# 34. REV_PRACTICE  skos:broader - 1
+sip-concept:REV_PRACTICE a skos:Concept ;
+    rdfs:label "Data revision - practice"@en ;
+    skos:definition "Information on the data revision practice."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REV_PRACTICE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment """This metadata element is used to provide documentation regarding the source data used and the way they are adjusted, in order to give compilers the possibility of incorporating new and more accurate information into estimates, thus improving their accuracy without introducing breaks in the time series. It also describes the revision status of available data. Data may also be subject to regular or ad hoc revisions as a result of the introduction of new classifications, compilation frameworks and methodologies which result in the compilation of historical data that replace previously released data. Whether or not such changes constitute an actual "revision" or the compilation of a "new" series is a matter of judgment to be done by the statistical agency."""@en ;
+    skos:broader sip-concept:DATA_REV ;
+    skos:related sip-concept:REV_POLICY ;
+    skos:related sip-concept:REV_STUDY ;
+    skos:exactMatch sdmx-concept:revPractice .
+
+# 35. REV_STUDY  skos:broader - 1
+sip-concept:REV_STUDY a skos:Concept ;
+    rdfs:label "Data revision - studies"@en ;
+    skos:definition "Information about data revision studies and analyses."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REV_STUDY" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Description of periodic studies related to data revisions. These studies can contain quantitative measures of the effects of revisions, such as mean revision and revision variance in estimates."@en ;
+    skos:broader sip-concept:DATA_REV ;
+    skos:related sip-concept:REV_POLICY ;
+    skos:related sip-concept:REV_PRACTICE ;
+    skos:exactMatch sdmx-concept:revStudy .
+
+# 36. DSD  skos:broader - 1
+sip-concept:DSD a skos:Concept ;
+    rdfs:label "Data structure definition, DSD"@en ;
+    skos:definition "Set of structural metadata associated to a data set, which includes information about how concepts are associated with the measures, dimensions, and attributes of a data cube, along with information about the representation of data and related descriptive metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).DSD" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """A DSD defines the structure of an organised collection of data (Data Set) by means of concepts with specific roles, and their representation. In order to exchange or disseminate statistical information, an institution needs to specify which statistical concepts are necessary for identifying the series (and for use as dimensions) and which statistical concepts are to be used as attributes and measures. These definitions form the data structure definition. In a data collection scenario the specification of the data structure definition is often a collaborative venture between the collecting institution and its partners. There are three types of construct in the DSD: Dimension, Attribute, and Measure. Each of these combines a Concept with its representation (this can be either a reference to a Code list or a non-coded data type such as "integer", "string", "date/time"). The roles of the three types of construct (Dimension, Attribute, and Measure) are as follows: A Dimension is an identifying component, sometimes referred to as a "classificatory variable". When a value is given to each of the Dimensions in a data set (this is often called a "key" or a "series") the resulting key, when combined with a time value, uniquely identifies an observation. For instance, country, indicator, measurement unit, frequency, and time dimensions together identify the cells in a cross-country time series with multiple indicators (for example, gross domestic product, gross domestic debt) measured in different units (for example, various currencies, percent changes) and at different frequencies (for example, annual, quarterly). The cells in such a multi-dimensional table contain the observation values. The DSD construct that specifies the Concept and expected representation of an observation is called a Measure. The semantics of the measure are derived from the Dimensions or a sub set of them and, if not specified in a Dimension, an Attribute indicating the measurement unit e.g. indicator and measure unit (gross domestic product percentage change). Additional metadata that are useful for understanding or processing the observed value or the context of data set or series are called an Attribute in the DSD. Examples of an attribute are a note on the observation, a confidentiality status, or the unit of measure used, or the Title of a series."""@en ;
+    skos:related sip-concept:ATTRIBUTE ;
+    skos:related sip-concept:DIMENSION ;
+    skos:broader sip-concept:DATA_SET ;
+    skos:related sip-concept:MEASURE .
+
+# 37. DIMENSION  skos:broader - 1
+sip-concept:DIMENSION a skos:Concept ;
+    rdfs:label "Dimension"@en ;
+    skos:definition "Statistical concept used in combination with other statistical concepts to identify a statistical series or individual observations."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).DIMENSION" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """In SDMX, "dimension" is a statistical concept used (most probably together with other statistical concepts) to identify a series, e.g. a statistical concept indicating a particular economic activity or a geographical reference area."""@en ;
+    skos:related sip-concept:CONCEPT ;
+    skos:broader sip-concept:DSD ;
+    skos:related sip-concept:SERIES_KEY .
+
+# 38. MICRO_DAT_ACC  skos:broader - 1
+sip-concept:MICRO_DAT_ACC a skos:Concept ;
+    rdfs:label "Dissemination format - microdata access"@en ;
+    skos:definition "Information on whether micro-data are also disseminated."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).MICRO_DAT_ACC" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element indicates whether micro-data are also disseminated, e.g. to researchers. Access conditions should be described in short."@en ;
+    skos:broader sip-concept:DISS_FORMAT ;
+    skos:related sip-concept:NEWS_REL ;
+    skos:related sip-concept:ONLINE_DB ;
+    skos:related sip-concept:PUBLICATIONS ;
+    skos:related sip-concept:DISS_OTHER ;
+    skos:exactMatch sdmx-concept:microDatAcc .
+
+# 39. NEWS_REL  skos:broader - 1
+sip-concept:NEWS_REL a skos:Concept ;
+    rdfs:label "Dissemination format - news release"@en ;
+    skos:definition "Regular or ad-hoc press releases linked to the data."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).NEWS_REL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This concept covers press releases or other kind of similar releases linked to data or metadata."@en ;
+    skos:broader sip-concept:DISS_FORMAT ;
+    skos:related sip-concept:MICRO_DAT_ACC ;
+    skos:related sip-concept:ONLINE_DB ;
+    skos:related sip-concept:PUBLICATIONS ;
+    skos:related sip-concept:DISS_OTHER ;
+    skos:exactMatch sdmx-concept:newsRel .
+
+# 40. ONLINE_DB  skos:broader - 1
+sip-concept:ONLINE_DB a skos:Concept ;
+    rdfs:label "Dissemination format - online database"@en ;
+    skos:definition "Information about on-line databases in which the disseminated data can be accessed."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ONLINE_DB" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element provides a link to the on-line database where the data are available, with a summary identification of domain names as released on the website, as well as the related access conditions."@en ;
+    skos:broader sip-concept:DISS_FORMAT ;
+    skos:related sip-concept:MICRO_DAT_ACC ;
+    skos:related sip-concept:NEWS_REL ;
+    skos:related sip-concept:PUBLICATIONS ;
+    skos:related sip-concept:DISS_OTHER ;
+    skos:exactMatch sdmx-concept:onlineDb .
+
+# 41. PUBLICATIONS  skos:broader - 1
+sip-concept:PUBLICATIONS a skos:Concept ;
+    rdfs:label "Dissemination format - publications"@en ;
+    skos:definition "Regular or ad-hoc publications in which the data are made available to the public."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).PUBLICATIONS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element provides references to the most important data dissemination done through paper or on-line publications, including a summary identification and information on availability of the publication means."@en ;
+    skos:broader sip-concept:DISS_FORMAT ;
+    skos:related sip-concept:MICRO_DAT_ACC ;
+    skos:related sip-concept:NEWS_REL ;
+    skos:related sip-concept:ONLINE_DB ;
+    skos:related sip-concept:DISS_OTHER ;
+    skos:exactMatch sdmx-concept:publications .
+
+# 42. DISS_OTHER  skos:broader - 1
+sip-concept:DISS_OTHER a skos:Concept ;
+    rdfs:label "Dissemination format - other formats"@en ;
+    skos:definition "References to the most important other data dissemination done."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).DISS_OTHER" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment """Examples of other dissemination formats are analytical publications edited by policy users. This concept includes, as a sub-element, "Supplementary data", i.e. any customised tabulation that can be provided to meet specific requests (including information on procedures for obtaining access to these data)."""@en ;
+    skos:broader sip-concept:DISS_FORMAT ;
+    skos:related sip-concept:MICRO_DAT_ACC ;
+    skos:related sip-concept:NEWS_REL ;
+    skos:related sip-concept:ONLINE_DB ;
+    skos:related sip-concept:PUBLICATIONS ;
+    skos:exactMatch sdmx-concept:dissOther .
+
+# 43. ADV_NOTICE  skos:broader - 1
+sip-concept:ADV_NOTICE a skos:Concept ;
+    rdfs:label "Documentation on methodology - advance notice"@en ;
+    skos:definition "Policy on notifying the public of changes in methodology, indicating whether the public is notified before a methodological change affects disseminated data and, if so, how long before."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).ADV_NOTICE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element informs users in advance about major changes in methodology, source data, and statistical techniques."@en ;
+    skos:broader sip-concept:DOC_METHOD ;
+    skos:exactMatch sdmx-concept:advNotice .
+
+# 44. FACET  skos:broader - 1
+sip-concept:FACET a skos:Concept ;
+    rdfs:label "Facet"@en ;
+    skos:definition "Format specification of a component's content when reported in a data or metadata set."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).FACET" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "This specifies the valid format for a non-enumerated domain for a component."@en ;
+    skos:broader sip-concept:COMPONENT .
+
+# 45. INST_MAN_SHAR  skos:broader - 1
+sip-concept:INST_MAN_SHAR a skos:Concept ;
+    rdfs:label "Institutional mandate - data sharing"@en ;
+    skos:definition "Arrangements or procedures for data sharing and coordination between data producing agencies."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).INST_MAN_SHAR" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:INST_MANDATE ;
+    skos:related sip-concept:INST_MAN_LA_OA ;
+    skos:exactMatch sdmx-concept:instManShar .
+
+# 46. INST_MAN_LA_OA  skos:broader - 1
+sip-concept:INST_MAN_LA_OA a skos:Concept ;
+    rdfs:label "Institutional mandate - legal acts and other agreements"@en ;
+    skos:definition "Legal acts or other formal or informal agreements that assign responsibility as well as the authority to an agency for the collection, processing, and dissemination of statistics."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).INST_MAN_LA_OA" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "The concept covers provision in law assigning responsibility to specific organisations for collection, processing, and dissemination of statistics in one or several statistical domains. In addition, non-legal measures such as formal or informal administrative arrangements employed to specific organisations for collection, processing, and dissemination of statistics in one or several statistical domains should also be described."@en ;
+    skos:broader sip-concept:INST_MANDATE ;
+    skos:related sip-concept:INST_MAN_SHAR ;
+    skos:exactMatch sdmx-concept:instManLaOa .
+
+# 47. LEVEL  skos:broader - 1
+sip-concept:LEVEL a skos:Concept ;
+    rdfs:label "Level"@en ;
+    skos:definition "Identifiable position to which codes in a scheme of codes are related."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).LEVEL" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """In a "level based" hierarchy the level describes a group of Codes which are characterised by homogeneous coding, and where the parent of each Code in the group is at the same higher level of the Hierarchy. In a "value based" hierarchy the level describes information about the Hierarchical Codes at the specified nesting level (Source SDMX (2016)). A Statistical Classification has a structure which is composed of one or several Levels. A Level often is associated with a Concept, which defines it. A linear classification has only one Level (Source: GSIM Glossary)."""@en ;
+    skos:related sip-concept:CODING_FORMAT ;
+    skos:broader sip-concept:HIERARCHY .
+
+# 48. MEASURE  skos:broader - 1
+sip-concept:MEASURE a skos:Concept ;
+    rdfs:label "Measure"@en ;
+    skos:definition "Statistical concept for which data are provided in a data set."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).MEASURE" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "In a SDMX data set, the instance of a measure is often called an observation."@en ;
+    skos:broader sip-concept:DSD .
+
+# 49. MEMBER_SEL  skos:broader - 1
+sip-concept:MEMBER_SEL a skos:Concept ;
+    rdfs:label "Member selection"@en ;
+    skos:definition "Set of permissible values for one component of a data or metadata structure."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).MEMBER_SEL" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "This is a part of a Constraint."@en ;
+    skos:related sip-concept:MEMBER_VAL ;
+    skos:broader sip-concept:CONSTRAINT .
+
+# 50. MEMBER_VAL  skos:broader - 1
+sip-concept:MEMBER_VAL a skos:Concept ;
+    rdfs:label "Member value"@en ;
+    skos:definition "Single value of the set of values for a member selection."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).MEMBER_VAL" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "This is a part of a Constraint."@en ;
+    skos:broader sip-concept:MEMBER_SEL ;
+    skos:related sip-concept:CONSTRAINT .
+
+# 51. META_SET  skos:broader - 1
+sip-concept:META_SET a skos:Concept ;
+    rdfs:label "Metadata set"@en ;
+    skos:definition "Organised collection of reference metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).META_SET" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """In SDMX the metadata set must conform to the specification in a Metadata Structure Definition. The metadata set contains one or more reports, each report comprising the metadata content (a set of attributes and corresponding content), and the identification of the precise object to which the metadata are to be attached. The metadata can be attached to any SDMX artefact that can be identified (e.g. structural artefact such as a code, concept, dimension or a part of a data set such as a partial series key or observation). In SDMX the type of report defined in a Metadata Structure Definition is known as "reference metadata" which are typified by quality metadata but can contain any type of metadata. These metadata are generally not reported with the data (as data attributes in a data set) and are often collected to a different schedule to the data, are derived from separate (from the data) repositories and collected from/reported by systems different from the statistical data warehouse."""@en ;
+    skos:related sip-concept:MSD ;
+    skos:broader sip-concept:REF_METADATA .
+
+# 52. MSD  skos:broader - 1
+sip-concept:MSD a skos:Concept ;
+    rdfs:label "Metadata structure definition, MSD"@en ;
+    skos:definition "Specification of the allowed content of a metadata set in terms of attributes for which content is to be provided and to which type of object the metadata pertain."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).MSD" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "An MSD defines the reference metadata to be collected or reported by specifying the concepts required, how these relate to each other, their presentational structure and to which objects they are to be attached."@en ;
+    skos:related sip-concept:ATTRIBUTE ;
+    skos:related sip-concept:COMPONENT ;
+    skos:related sip-concept:CONCEPT ;
+    skos:broader sip-concept:META_SET ;
+    skos:related sip-concept:REF_METADATA .
+
+# 53. META_CERTIFIED  skos:broader - 1
+sip-concept:META_CERTIFIED a skos:Concept ;
+    rdfs:label "Metadata update - last certified"@en ;
+    skos:definition "Date of the latest certification provided by the domain manager to confirm that the metadata posted are still up-to-date, even if the content has not been amended."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).META_CERTIFIED" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: DateTime"@en ;
+    rdfs:comment "In statistical agencies, the domain manager is often asked to certify that the metadata are checked and updated at regular time intervals. The date of the latest certification is to be retained. The concept is relevant for metadata reporting from countries to international organisations within metadata standards initiatives."@en ;
+    skos:broader sip-concept:META_UPDATE ;
+    skos:related sip-concept:META_POSTED ;
+    skos:related sip-concept:META_LAST_UPDATE ;
+    skos:exactMatch sdmx-concept:metaCertified .
+
+# 54. META_POSTED  skos:broader - 1
+sip-concept:META_POSTED a skos:Concept ;
+    rdfs:label "Metadata update - last posted"@en ;
+    skos:definition "Date of the latest dissemination of the metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).META_POSTED" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: DateTime"@en ;
+    rdfs:comment "The date of the last posting (dissemination) of the metadata on the web site should be retained."@en ;
+    skos:broader sip-concept:META_UPDATE ;
+    skos:related sip-concept:META_CERTIFIED ;
+    skos:related sip-concept:META_LAST_UPDATE ;
+    skos:exactMatch sdmx-concept:metaPosted .
+
+# 55. META_LAST_UPDATE  skos:broader - 1
+sip-concept:META_LAST_UPDATE a skos:Concept ;
+    rdfs:label "Metadata update - last update"@en ;
+    skos:definition "Date of last update of the content of the metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).META_LAST_UPDATE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: DateTime"@en ;
+    rdfs:comment "The last update of the content of metadata should be retained. The update can concern one single concept, but also the metadata file as a whole. The concept is also relevant for metadata reporting from countries to international organisations within metadata standards initiatives."@en ;
+    skos:broader sip-concept:META_UPDATE ;
+    skos:related sip-concept:META_CERTIFIED ;
+    skos:related sip-concept:META_POSTED ;
+    skos:exactMatch sdmx-concept:metaLastUpdate .
+
+# 56. NOTIFICATION  skos:broader - 1
+sip-concept:NOTIFICATION a skos:Concept ;
+    rdfs:label "Notification"@en ;
+    skos:definition "Information sent to a person or application as a result of an event in an SDMX registry."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).NOTIFICATION" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "The SDMX Global Registry has the ability to send a Notification message either by means of an e-mail or by an SDMX message to a URL of a service that will process the notification. The sending of a Notification is triggered by an event in the registry that affects a structural metadata object in the registry, such as a change to a Code List, a deletion of a Code List, or the addition of a new Code List. The Notification is only created if there is one or more Subscriptions held for the object in question and it is sent only to the email addresses and URLs specified in the Subscriptions."@en ;
+    skos:broader sip-concept:SDMX_REG ;
+    skos:related sip-concept:SUBSCRIPT .
+
+# 57. PROF_COND  skos:broader - 1
+sip-concept:PROF_COND a skos:Concept ;
+    rdfs:label "Professionalism - code of conduct"@en ;
+    skos:definition "Provisions for assuring the qualifications of staff and allowing staff to perform their functions without intervention motivated by non-statistical objectives."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).PROF_COND" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to describe the policies promoting the recruitment and promotion of staff based on relevant aptitude; providing guidelines for staff behaviour and procedures to make these guidelines known to staff; and prescribing other practices that provide assurances of the independence, integrity, and accountability of the statistical agency."@en ;
+    skos:broader sip-concept:PROF ;
+    skos:related sip-concept:PROF_IMP ;
+    skos:related sip-concept:PROF_METH ;
+    skos:related sip-concept:PROF_STAT_COM ;
+    skos:exactMatch sdmx-concept:profCond .
+
+# 58. PROF_IMP  skos:broader - 1
+sip-concept:PROF_IMP a skos:Concept ;
+    rdfs:label "Professionalism - impartiality"@en ;
+    skos:definition "Elements providing assurances that statistics are produced on an impartial basis."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).PROF_IMP" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:PROF ;
+    skos:related sip-concept:PROF_COND ;
+    skos:related sip-concept:PROF_METH ;
+    skos:related sip-concept:PROF_STAT_COM ;
+    skos:exactMatch sdmx-concept:profImp .
+
+# 59. PROF_METH  skos:broader - 1
+sip-concept:PROF_METH a skos:Concept ;
+    rdfs:label "Professionalism - methodology"@en ;
+    skos:definition "Elements providing assurances that the choices of sources and statistical techniques as well as decisions about dissemination are informed solely by statistical considerations."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).PROF_METH" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:PROF ;
+    skos:related sip-concept:PROF_COND ;
+    skos:related sip-concept:PROF_IMP ;
+    skos:related sip-concept:PROF_STAT_COM ;
+    skos:exactMatch sdmx-concept:profMeth .
+
+# 60. PROF_STAT_COM  skos:broader - 1
+sip-concept:PROF_STAT_COM a skos:Concept ;
+    rdfs:label "Professionalism - statistical commentary"@en ;
+    skos:definition "Elements providing assurances that the statistical entity is entitled to comment on erroneous interpretation and misuse of statistics."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).PROF_STAT_COM" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:PROF ;
+    skos:related sip-concept:PROF_COND ;
+    skos:related sip-concept:PROF_IMP ;
+    skos:related sip-concept:PROF_METH ;
+    skos:exactMatch sdmx-concept:profStatCom .
+
+# 61. QUALITY_ASSMNT  skos:broader - 1
+sip-concept:QUALITY_ASSMNT a skos:Concept ;
+    rdfs:label "Quality management - quality assessment"@en ;
+    skos:definition "Overall evaluation of data quality, based on standard quality criteria."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).QUALITY_ASSMNT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "The overall assessment of data quality may include the result of a scoring or grading process for quality. Scoring may be quantitative or qualitative."@en ;
+    skos:broader sip-concept:QUALITY_MGMNT ;
+    skos:related sip-concept:QUALITY_ASSURE ;
+    skos:related sip-concept:QUALITY_DOC ;
+    skos:exactMatch sdmx-concept:qualityAssmnt .
+
+# 62. QUALITY_ASSURE  skos:broader - 1
+sip-concept:QUALITY_ASSURE a skos:Concept ;
+    rdfs:label "Quality management - quality assurance"@en ;
+    skos:definition "Guidelines focusing on quality in general and dealing with quality of statistical programmes, including measures for ensuring the efficient use of resources."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).QUALITY_ASSURE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element refers to all the planned and systematic activities implemented that can be demonstrated to provide confidence that the data production processes will fulfil the requirements for the statistical output. This includes the design of programmes for quality management, the description of planning process, scheduling of work, frequency of plan updates, and other organisational arrangements to support and maintain planning function."@en ;
+    skos:broader sip-concept:QUALITY_MGMNT ;
+    skos:related sip-concept:QUALITY_ASSMNT ;
+    skos:related sip-concept:QUALITY_DOC ;
+    skos:exactMatch sdmx-concept:qualityAssure .
+
+# 63. QUALITY_DOC  skos:broader - 1
+sip-concept:QUALITY_DOC a skos:Concept ;
+    rdfs:label "Quality management - quality documentation"@en ;
+    skos:definition "Documentation on procedures applied for quality management and quality assessment."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).QUALITY_DOC" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This metadata element is used to document the methods and standards for assessing data quality, based on standard quality criteria such as relevance, accuracy and reliability, timeliness and punctuality, accessibility and clarity, comparability, and coherence."@en ;
+    skos:broader sip-concept:QUALITY_MGMNT ;
+    skos:related sip-concept:QUALITY_ASSMNT ;
+    skos:related sip-concept:QUALITY_ASSURE ;
+    skos:exactMatch sdmx-concept:qualityDoc .
+
+# 64. REL_CAL_POLICY  skos:broader - 1
+sip-concept:REL_CAL_POLICY a skos:Concept ;
+    rdfs:label "Release policy - release calendar"@en ;
+    skos:definition "Schedule of statistical release dates."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REL_CAL_POLICY" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "An advance release calendar is the schedule for release of data, which are publicly disseminated so as to provide prior notice of the precise release dates on which a national statistical agency, other national agency, or international organisation undertakes to release specified statistical information to the public. Such information may be provided for statistical releases in the coming week, month, quarter or year."@en ;
+    skos:broader sip-concept:REL_POLICY ;
+    skos:related sip-concept:REL_CAL_ACCESS ;
+    skos:related sip-concept:REL_POL_TRA ;
+    skos:related sip-concept:REL_POL_US_AC ;
+    skos:exactMatch sdmx-concept:relCalPolicy .
+
+# 65. REL_CAL_ACCESS  skos:broader - 1
+sip-concept:REL_CAL_ACCESS a skos:Concept ;
+    rdfs:label "Release policy - release calendar access"@en ;
+    skos:definition "Description of how the release calendar can be accessed."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REL_CAL_ACCESS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Access to the release calendar information. A hyperlink should be provided if available."@en ;
+    skos:broader sip-concept:REL_POLICY ;
+    skos:related sip-concept:REL_CAL_POLICY ;
+    skos:related sip-concept:REL_POL_TRA ;
+    skos:related sip-concept:REL_POL_US_AC ;
+    skos:exactMatch sdmx-concept:relCalAccess .
+
+# 66. REL_POL_TRA  skos:broader - 1
+sip-concept:REL_POL_TRA a skos:Concept ;
+    rdfs:label "Release policy - transparency"@en ;
+    skos:definition "Statement describing whether and how the release policy is disseminated to the public."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REL_POL_TRA" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This statement does not describe the release policy itself."@en ;
+    skos:broader sip-concept:REL_POLICY ;
+    skos:related sip-concept:REL_CAL_POLICY ;
+    skos:related sip-concept:REL_CAL_ACCESS ;
+    skos:related sip-concept:REL_POL_US_AC ;
+    skos:exactMatch sdmx-concept:relPolTra .
+
+# 67. REL_POL_US_AC  skos:broader - 1
+sip-concept:REL_POL_US_AC a skos:Concept ;
+    rdfs:label "Release policy - user access"@en ;
+    skos:definition "Policy for release of the data to users, scope of dissemination (e.g. to the public, to selected users), how users are informed that the data are being released, and whether the policy determines the dissemination of statistical data to all users."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REL_POL_US_AC" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    skos:broader sip-concept:REL_POLICY ;
+    skos:related sip-concept:REL_CAL_POLICY ;
+    skos:related sip-concept:REL_CAL_ACCESS ;
+    skos:related sip-concept:REL_POL_TRA ;
+    skos:exactMatch sdmx-concept:relPolUsAc .
+
+# 68. COMPLETENESS  skos:broader - 1
+sip-concept:COMPLETENESS a skos:Concept ;
+    rdfs:label "Relevance - completeness"@en ;
+    skos:definition "Extent to which all statistics that are needed are available."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPLETENESS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "The measurement of the availability of statistics normally refers to data sets and compares the required data set to the available one."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS_RATE ;
+    skos:related sip-concept:USER_NEEDS ;
+    skos:related sip-concept:USER_SAT ;
+    skos:exactMatch sdmx-concept:completeness .
+
+# 69. COMPLETENESS_RATE  skos:broader - 1
+sip-concept:COMPLETENESS_RATE a skos:Concept ;
+    rdfs:label "Relevance - data completeness rate"@en ;
+    skos:definition "Ratio of the number of data cells provided to the number of data cells required or relevant. The ratio is computed for a chosen dataset and a given period."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPLETENESS_RATE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "For a specific key variable this indicator can be calculated in two forms: a) for data producers, and b) for data users. The indicator shows to what extent statistics are available compared to what should be available. For producers, It can be used to evaluate the degree of compliance by a given Member State for a given dataset and period. For users, it can be used to: identify whether important variables are missing for some individual Member State or alternatively; give users an overall measurement (aggregate across countries and/or key variables) of the availability of statistics. The indicator should be accompanied by information about which variables are missing and the reasons for incompleteness as well as, where relevant, the impact of the missing data on aggregates, and plans for improving completeness in the future."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS ;
+    skos:related sip-concept:USER_NEEDS ;
+    skos:related sip-concept:USER_SAT .
+
+# 70. COMPLETENESS_RATE_P  skos:broader - 1
+sip-concept:COMPLETENESS_RATE_P a skos:Concept ;
+    rdfs:label "Relevance - data completeness rate (for data producers)"@en ;
+    skos:definition "Ratio of the number of data cells provided to the number of data cells required or relevant. The ratio is computed for a chosen dataset and a given period."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPLETENESS_RATE_P" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "For a specific key variable this indicator can be calculated in two forms: a) for data producers, and b) for data users. The indicator shows to what extent statistics are available compared to what should be available. For producers, It can be used to evaluate the degree of compliance by a given Member State for a given dataset and period. For users, it can be used to: identify whether important variables are missing for some individual Member State or alternatively; give users an overall measurement (aggregate across countries and/or key variables) of the availability of statistics. The indicator should be accompanied by information about which variables are missing and the reasons for incompleteness as well as, where relevant, the impact of the missing data on aggregates, and plans for improving completeness in the future."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS ;
+    skos:related sip-concept:USER_NEEDS ;
+    skos:related sip-concept:USER_SAT .
+
+# 71. COMPLETENESS_RATE_U  skos:broader - 1
+sip-concept:COMPLETENESS_RATE_U a skos:Concept ;
+    rdfs:label "Relevance - data completeness rate (for data users)"@en ;
+    skos:definition "Ratio of the number of data cells provided to the number of data cells required or relevant. The ratio is computed for a chosen dataset and a given period."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).COMPLETENESS_RATE_U" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "For a specific key variable this indicator can be calculated in two forms: a) for data producers, and b) for data users. The indicator shows to what extent statistics are available compared to what should be available. For producers, It can be used to evaluate the degree of compliance by a given Member State for a given dataset and period. For users, it can be used to: identify whether important variables are missing for some individual Member State or alternatively; give users an overall measurement (aggregate across countries and/or key variables) of the availability of statistics. The indicator should be accompanied by information about which variables are missing and the reasons for incompleteness as well as, where relevant, the impact of the missing data on aggregates, and plans for improving completeness in the future."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS ;
+    skos:related sip-concept:USER_NEEDS ;
+    skos:related sip-concept:USER_SAT .
+
+# 72. USER_NEEDS  skos:broader - 1
+sip-concept:USER_NEEDS a skos:Concept ;
+    rdfs:label "Relevance - user needs"@en ;
+    skos:definition "Description of requirements with respect to the statistical output."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).USER_NEEDS" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "With respect to the statistical data to be provided, the main users (e.g. official authorities, the public or others) and user needs should be stated, e.g. official authorities with the needs for policy indicators, national users, etc."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS ;
+    skos:related sip-concept:COMPLETENESS_RATE ;
+    skos:related sip-concept:USER_SAT ;
+    skos:exactMatch sdmx-concept:userNeeds .
+
+# 73. USER_SAT  skos:broader - 1
+sip-concept:USER_SAT a skos:Concept ;
+    rdfs:label "Relevance - user satisfaction"@en ;
+    skos:definition "Description of how well the disseminated statistics meet the expressed user needs."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).USER_SAT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "In quality assurance frameworks this element indicates how the views and opinions of the users are collected. If user satisfaction surveys are conducted, the way users' views and opinions are collected should be described and the main results shown (in the form of a user satisfaction index if available); the date of the most recent user satisfaction survey should also be mentioned. Otherwise, any other indication or measure to determine user satisfaction might be used."@en ;
+    skos:broader sip-concept:RELEVANCE ;
+    skos:related sip-concept:COMPLETENESS ;
+    skos:related sip-concept:COMPLETENESS_RATE ;
+    skos:related sip-concept:USER_NEEDS ;
+    skos:exactMatch sdmx-concept:userSat .
+
+# 74. REP_CATEGORY  skos:broader - 1
+sip-concept:REP_CATEGORY a skos:Concept ;
+    rdfs:label "Reporting category"@en ;
+    skos:definition "Component of a reporting taxonomy that gives structure to a report and links to data and metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REP_CATEGORY" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "This is used to group Dataflows and Metadataflows to support data publication."@en ;
+    skos:related sip-concept:REP_TAXO ;
+    skos:broader sip-concept:REPRESENT .
+
+# 75. REP_TAXO  skos:broader - 1
+sip-concept:REP_TAXO a skos:Concept ;
+    rdfs:label "Reporting taxonomy"@en ;
+    skos:definition "Scheme which defines the composition structure of a data report where each component can be described by an independent Dataflow Definition or Metadataflow Definition."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).REP_TAXO" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "This is used to group the Reporting Categories that link to Dataflows and Metadataflows to support data publication."@en ;
+    skos:broader sip-concept:REP_CATEGORY .
+
+# 76. SDMX_REG_INTERFACE  skos:broader - 1
+sip-concept:SDMX_REG_INTERFACE a skos:Concept ;
+    rdfs:label "SDMX registry interface (in the context of registry)"@en ;
+    skos:definition "SDMX-ML specification of the allowable constructs that an SDMX registry must consume or output in its response."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).SDMX_REG_INTERFACE" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "The SDMX Registry must comply with the Registry Interface API and web services specification for query. An SDMX Registry is not obliged to implement all of the APIs."@en ;
+    skos:related sip-concept:SDMX_ML ;
+    skos:broader sip-concept:SDMX_REG .
+
+# 77. SERIES_KEY  skos:broader - 1
+sip-concept:SERIES_KEY a skos:Concept ;
+    rdfs:label "Series key"@en ;
+    skos:definition "Cross product of values of dimensions, where either the cross product or the cross product combined with a time value, identifies uniquely an observation."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).SERIES_KEY" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment """Most series keys are combined with a time value in a data set in order to identify uniquely an observation. There may be particular series keys that do not require a time value in order to achieve this, so the "Time Dimension" is not obligatory in an SDMX Data Structure Definition. In an SDMX data set there must be a value for all of the Dimensions specified in the Data Structure Definition when reporting data for a series key. The combination of the semantic of the names of the concepts used by the Dimension (excluding time) describes a series key. Unless the Data Structure Definition contains multiple measures this semantic is often the semantic of the observation."""@en ;
+    skos:related sip-concept:DIMENSION ;
+    skos:broader sip-concept:SIBLING_GR .
+
+# 78. STAT_SUBJECT_MATTER  skos:broader - 1
+sip-concept:STAT_SUBJECT_MATTER a skos:Concept ;
+    rdfs:label "Statistical subject-matter domain"@en ;
+    skos:definition "Statistical activity that has common characteristics with respect to concepts and methodologies for data collection, manipulation and transformation."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).STAT_SUBJECT_MATTER" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "Within SDMX, the list of Statistical Subject-Matter Domains (aligned to the Classification of International Statistical Activities maintained by the Conference of European Statisticians of the United Nations Economic Commission for Europe, UNECE) is a standard reference list against which the categorisation schemes of various participants in exchange arrangements can be mapped to facilitate data and metadata exchange. This allows the identification of subject-matter domain groups involved in the development of guidelines and recommendations relevant to one or more statistical domains. Each of these groups could define domain-specific data structure definitions, concepts, etc."@en ;
+    skos:broader sip-concept:COG .
+
+# 79. STRUCT_META  skos:broader - 1
+sip-concept:STRUCT_META a skos:Concept ;
+    rdfs:label "Structural metadata"@en ;
+    skos:definition "Metadata that identify and describe data and reference metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).STRUCT_META" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "Structural metadata are needed to identify, use, and process data matrixes and data cubes, e.g. names of columns or dimensions of statistical cubes. Structural metadata must be associated with the statistical data and reference metadata, otherwise it becomes impossible to identify, retrieve and navigate the data or reference metadata. In SDMX structural metadata are not limited to describing the structure of data and reference metadata. The structural metadata in SDMX include many of the other constructs to be found in the SDMX Information Model including data discovery, data and metadata constraints (used for both data validation and data discovery), data and structure mapping, data and metadata reporting, statistical processes,"@en ;
+    skos:related sip-concept:CDC ;
+    skos:broader sip-concept:REF_METADATA ;
+    skos:related sip-concept:STRUCT_VALIDATION .
+
+# 80. STRUCT_VALIDATION  skos:broader - 1
+sip-concept:STRUCT_VALIDATION a skos:Concept ;
+    rdfs:label "Structural validation"@en ;
+    skos:definition "Process to determine the validity of data and reference metadata using structural metadata."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).STRUCT_VALIDATION" ;
+    skos:inScheme sip-concept:cog ;
+    rdfs:comment "In part the validation can be performed by processes that check the syntax of the data for conformance with the standard, for example a process for validating an XML instance (e.g. an SDMX data set) against the XML schema that defines the allowable structure and content of the instance. In SDMX the structural metadata contain additional metadata that can be used for validation but which cannot be expressed in an XML schema. Examples of these additional metadata include Constraints and Data Providers. The Constraint is used to specify the codes that are contained in a code list and which are valid for the type (sub set) of data that are to be expressed in data set in given context. The Data Provider specifies which type of data is expected or allowed to be reported or disseminated by a specific individual or organisation."@en ;
+    skos:related sip-concept:REF_METADATA ;
+    skos:broader sip-concept:STRUCT_META .
+
+# 81. TIMELAG_FINAL  skos:broader - 1
+sip-concept:TIMELAG_FINAL a skos:Concept ;
+    rdfs:label "Time lag - final results"@en ;
+    skos:definition "Number of days (or weeks or months) from the last day of the reference period to the day of publication of complete and final results."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).TIMELAG_FINAL" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This indicator quantifies the gap between the release date of the final results and the end of the reference period."@en ;
+    skos:related sip-concept:TIMELAG_FIRST ;
+    skos:broader sip-concept:TIMELINESS .
+
+# 82. TIMELAG_FIRST  skos:broader - 1
+sip-concept:TIMELAG_FIRST a skos:Concept ;
+    rdfs:label "Time lag - first results"@en ;
+    skos:definition "Number of days (or weeks or months) from the last day of the reference period to the day of publication of first results."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).TIMELAG_FIRST" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "This indicator quantifies the gap between the release date of first results and the date of reference for the data."@en ;
+    skos:related sip-concept:TIMELAG_FINAL ;
+    skos:broader sip-concept:TIMELINESS .
+
+# 83. TIME_SOURCE  skos:broader - 1
+sip-concept:TIME_SOURCE a skos:Concept ;
+    rdfs:label "Timeliness - source data"@en ;
+    skos:definition "Time between the end of a reference period and actual receipt of the data by the compiling agency."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).TIME_SOURCE" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: String"@en ;
+    rdfs:comment "Compared to the parent concept - timeliness - this concept only covers the time period between the end of the reference period and the receipt of the data by the data compiling agency. This time period is determined by factors such as delays reflecting the institutional arrangements for data transmission."@en ;
+    skos:broader sip-concept:TIMELINESS ;
+    skos:exactMatch sdmx-concept:timeSource .
+
+# 84. TIME_PER_COLLECT  skos:broader - 1
+sip-concept:TIME_PER_COLLECT a skos:Concept ;
+    rdfs:label "Time period - collection"@en ;
+    skos:definition "Dates or periods during which the observations have been collected (such as middle, average or end of period) for the target reference period."@en ;
+    skos:notation "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CROSS_DOMAIN_CONCEPTS(2.0).TIME_PER_COLLECT" ;
+    skos:inScheme sip-concept:cog ;
+    skos:note "Recommended representation: Code list"@en ;
+    skos:note "Codelist ID: CL_TIME_PER_COLLECT"@en ;
+    skos:broader sip-concept:TIME_PERIOD ;
+    skos:exactMatch sdmx-concept:timePerCollect .
