@@ -16,5 +16,5 @@ All of the above are permissively licensed and compatible with Apache-2.0.
 
 ---
 
-© 2025 <ваше имя или организация>  
+© 2025 Semantic R&D Group
 This file is provided for transparency and compliance with open-source license terms.
